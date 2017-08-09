@@ -18,6 +18,12 @@
 <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
 <link type="text/css" rel="stylesheet" href="css/animations.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="datajs/globalvar.js"></script>
+<script type="text/javascript" src="datajs/jq.js"></script>
+<script type="text/javascript" src="datajs/leftmenu.js"></script>
+<script type="text/javascript" src="datajs/user_menu.js"></script>
+
+
 </head>
 <body id="mobile_wrap">
 
@@ -27,33 +33,8 @@
 
     <div class="panel panel-left panel-reveal">
       <nav class="sidebar-nav">
-      <ul>
-      <li><a href="index.html" class="close-panel"><img src="images/icons/red/home.png" alt="" title="" /><span>Home</span></a></li>
-
-      <li><a href="#" class="close-panel"><img src="images/icons/red/electronics.png" alt="" title="" /><span>Dashboard</span></a></li>
-
-      <li><a href="assignment.html" class="close-panel"><img src="images/icons/red/features.png" alt="" title="" /><span>Assignment</span></a></li>
-
-      <li><a href="attendance.html" class="close-panel"><img src="images/icons/red/categories.png" alt="" title="" /><span>Attendance</span></a></li>
-
-      <li><a href="notice.html" class="close-panel"><img src="images/icons/red/blog.png" alt="" title="" /><span>Notice</span></a></li>
-
-      <li><a href="subject.html" class="close-panel"><img src="images/icons/red/menu.png" alt="" title="" /><span>Subject</span></a></li>
-
-      <li><a href="classplan.html" class="close-panel"><img src="images/icons/red/tabs.png" alt="" title="" /><span>Class Plan</span></a></li>
-
-      <li><a href="markshit.html" class="close-panel"><img src="images/icons/red/tables.png" alt="" title="" /><span>Markshit</span></a></li>
+      <ul id="sidemenu">
       
-
-      <li><a href="complain.html" class="close-panel"><img src="images/icons/red/shop.png" alt="" title="" /><span>Complain</span></a></li>
-
-      
-      <li><a href="holyday.html" class="close-panel"><img src="images/icons/red/building.png" alt="" title="" /><span>Holyday</span></a></li>
-
-
-          
-      
-
       </ul>
       </nav>
     </div>
@@ -71,12 +52,8 @@
                 </div>
         
                   <nav class="user-nav">
-                    <ul>
-                      <li><a href="features.html" class="close-panel"><img src="images/icons/red/settings.png" alt="" title="" /><span>Account Settings</span></a></li>
-                      <li><a href="features.html" class="close-panel"><img src="images/icons/red/briefcase.png" alt="" title="" /><span>My Account</span></a></li>
-                      <li><a href="features.html" class="close-panel"><img src="images/icons/red/message.png" alt="" title="" /><span>Messages</span><strong>12</strong></a></li>
-                      <li><a href="features.html" class="close-panel"><img src="images/icons/red/love.png" alt="" title="" /><span>Favorites</span><strong>5</strong></a></li>
-                      <li><a href="index.html" class="close-panel"><img src="images/icons/red/lock.png" alt="" title="" /><span>Logout</span></a></li>
+                    <ul id="rightmenu">
+                      
                     </ul>
                   </nav>
       </div>
@@ -118,19 +95,19 @@
             <h4>LOGIN</h4>
             <div class="loginform">
                 <form id="LoginForm" method="post">
-                    <input type="text" name="Username" value="" class="form_input required" placeholder="username" />
-                    <input type="password" name="Password" value="" class="form_input required" placeholder="password" />
+                    <input type="text" name="username" id="username" value="" class="form_input required" placeholder="username" />
+                    <input type="password" name="password" id="password" value="" class="form_input required" placeholder="password" />
                     <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div>
-                    <input type="submit" name="submit" class="form_submit" id="submit" value="SIGN IN" />
+                    <input type="button" id="login" name="submit" class="form_submit" value="SIGN IN" onClick="submit_data()" />
                 </form>
-                <div class="signup_bottom">
+                <!--<div class="signup_bottom">
                     <p>Don't have an account?</p>
                     <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
-                </div>
+                </div>-->
             </div>
-            <div class="close_popup_button">
+           <!-- <div class="close_popup_button">
                 <a href="welcome.html" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
-            </div>
+            </div>-->
         </div>
     </div>
 
@@ -239,5 +216,14 @@
 <script type="text/javascript" src="js/email.js"></script>
 <script type="text/javascript" src="js/audio.min.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
+
+<script type="text/javascript" src="datajs/jquery.session.js"></script>
+<script type="text/javascript">
+/*
+if($.session.get('session_id') == NULL) {
+alert($.session.get('session_id'));
+}*/
+</script>
+<script type="text/javascript" src="datajs/login.js"></script>
   </body>
 </html>
